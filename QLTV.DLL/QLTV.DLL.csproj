@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DocGiaDLL.cs" />
+    <Compile Include="LoaiSachDLL.cs" />
     <Compile Include="NguoiDungDLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachDLL.cs" />

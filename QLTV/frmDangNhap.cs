@@ -24,6 +24,8 @@ namespace QLTV
             if (obj.getLogin(txtTaiKhoan.Text, txtMatKhau.Text))
             {
                 MessageBox.Show("Success!");
+                new frmHeThong().Show();
+                this.Hide();
             }else
             {
                 MessageBox.Show("Fail!");

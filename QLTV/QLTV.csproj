@@ -67,6 +67,24 @@
     <Compile Include="frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocGia.Designer.cs">
+      <DependentUpon>frmDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHeThong.Designer.cs">
+      <DependentUpon>frmHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoaiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiSach.Designer.cs">
+      <DependentUpon>frmLoaiSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +95,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocGia.resx">
+      <DependentUpon>frmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHeThong.resx">
+      <DependentUpon>frmHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiSach.resx">
+      <DependentUpon>frmLoaiSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>

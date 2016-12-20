@@ -48,7 +48,7 @@ namespace QLTV.DAL
         public bool insertData(Sach data)
         {
             bool check = false;
-            String sql = String.Format("INSERT INTO tb_Sach(maSach, tieuDe, giaBia, tacGia, namXuatBan, soLuongTon, maLoaiSach) VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", data.MaSach, data.TieuDe, data.GiaBia, data.TacGia, data.NamXuatBan, data.SoLuongTon, data.MaLoaiSach);
+            String sql = String.Format("INSERT INTO tb_Sach(maSach, tieuDe, giaBia, tacGia, namXuatBan, soLuongTon, maLoaiSach) VALUES('{0}',N'{1}','{2}',N'{3}','{4}','{5}','{6}')", data.MaSach, data.TieuDe, data.GiaBia, data.TacGia, data.NamXuatBan, data.SoLuongTon, data.MaLoaiSach);
             openConnection();
             int r = ExecuteNonQuery(sql);
             if (r > 0) check = true;
