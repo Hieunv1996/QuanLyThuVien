@@ -1,0 +1,9 @@
+E:\Code\visualStudio\QLTV\QLTV.DLL\obj\Debug\QLTV.DLL.csprojResolveAssemblyReference.cache
+E:\Code\visualStudio\QLTV\QLTV.DLL\bin\Debug\QLTV.DLL.dll
+E:\Code\visualStudio\QLTV\QLTV.DLL\bin\Debug\QLTV.DLL.pdb
+E:\Code\visualStudio\QLTV\QLTV.DLL\bin\Debug\QLTV.DAL.dll
+E:\Code\visualStudio\QLTV\QLTV.DLL\bin\Debug\QLTV.DAL.pdb
+E:\Code\visualStudio\QLTV\QLTV.DLL\obj\Debug\QLTV.DLL.dll
+E:\Code\visualStudio\QLTV\QLTV.DLL\obj\Debug\QLTV.DLL.pdb
+E:\Code\visualStudio\QLTV\QLTV.DLL\bin\Debug\QLTV.Entity.dll
+E:\Code\visualStudio\QLTV\QLTV.DLL\bin\Debug\QLTV.Entity.pdb
