@@ -97,11 +97,23 @@
     <Compile Include="frmQLMuon.Designer.cs">
       <DependentUpon>frmQLMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLTra.Designer.cs">
+      <DependentUpon>frmQLTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSach.Designer.cs">
       <DependentUpon>frmSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTra.Designer.cs">
+      <DependentUpon>frmTra.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,8 +135,14 @@
     <EmbeddedResource Include="frmQLMuon.resx">
       <DependentUpon>frmQLMuon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQLTra.resx">
+      <DependentUpon>frmQLTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTra.resx">
+      <DependentUpon>frmTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

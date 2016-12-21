@@ -67,7 +67,7 @@ namespace QLTV.Entity
         }
         public void PhieuTraIDataReader(SqlDataReader dr)
         {
-            maPhieuTra = dr["maPhieuTra"] is DBNull ? string.Empty : dr["maPhieuTra"].ToString();
+            maPhieuTra = dr["maPT"] is DBNull ? string.Empty : dr["maPT"].ToString();
             MaDocGia = dr["MaDocGia"] is DBNull ? string.Empty : dr["MaDocGia"].ToString();
             NgayTra = dr["NgayTra"] is DBNull ? "" : dr["NgayTra"].ToString();
             ThanhTien = dr["ThanhTien"] is DBNull ? 0 : int.Parse(dr["ThanhTien"].ToString());

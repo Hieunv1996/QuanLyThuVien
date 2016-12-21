@@ -20,7 +20,6 @@ E:\Code\visualStudio\QuanLyThuVien\QLTV\QLTV\obj\Debug\QLTV.pdb
 E:\Code\visualStudio\QuanLyThuVien\QLTV\bin\Debug\QLTV.exe.config
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.exe
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.pdb
-E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.csprojResolveAssemblyReference.cache
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmDangNhap.resources
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmSach.resources
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.Properties.Resources.resources
@@ -38,3 +37,6 @@ E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmDocGia.resources
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmHeThong.resources
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmQLMuon.resources
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmMuon.resources
+E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.csprojResolveAssemblyReference.cache
+E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmQLTra.resources
+E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmTra.resources

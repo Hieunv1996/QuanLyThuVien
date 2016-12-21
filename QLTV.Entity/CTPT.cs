@@ -68,7 +68,7 @@ namespace QLTV.Entity
         public void CTPTIDataReader(SqlDataReader dr)
         {
             MaCTPT = dr["MaCTPT"] is DBNull ? string.Empty : dr["MaCTPT"].ToString();
-            MaPhieuTra = dr["MaPhieuTra"] is DBNull ? string.Empty : dr["MaPhieuTra"].ToString();
+            MaPhieuTra = dr["maPT"] is DBNull ? string.Empty : dr["maPT"].ToString();
             MaSach = dr["MaSach"] is DBNull ? "" : dr["MaSach"].ToString();
             ThanhTien = dr["ThanhTien"] is DBNull ? 0 : int.Parse(dr["thanhTien"].ToString());
         }

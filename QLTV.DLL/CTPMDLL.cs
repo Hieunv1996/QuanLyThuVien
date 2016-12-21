@@ -32,5 +32,9 @@ namespace QLTV.DLL
         {
             return obj.deleteAllData(id);
         }
+        public List<CTPM> getCTPM(string maKh)
+        {
+            return obj.getCTPM(maKh);
+        }
     }
 }

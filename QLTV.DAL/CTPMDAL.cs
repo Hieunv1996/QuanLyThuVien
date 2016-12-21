@@ -46,6 +46,26 @@ namespace QLTV.DAL
             return lst;
         }
 
+        public List<CTPM> getCTPM(String maKH)
+        {
+            List<CTPM> lst = new List<CTPM>();
+            String sql = String.Format("select tb_CTPM.* from tb_CTPM,tb_PhieuMuon where tb_PhieuMuon.maPM = tb_CTPM.maPM and maDocGia = '{0}'", maKH);
+
+            using (SqlCommand cmd = new SqlCommand(sql, openConnection()))
+            {
+                SqlDataReader dr;
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    CTPM obj = new CTPM();
+                    obj.CTPMIDataReader(dr);
+                    lst.Add(obj);
+                }
+                dr.Close();
+            }
+            return lst;
+        }
+
         public bool insertData(CTPM data)
         {
             bool check = false;

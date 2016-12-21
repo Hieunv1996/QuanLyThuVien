@@ -157,7 +157,7 @@ namespace QLTV
                 {
                     lstctpm[i].MaCTPM = frmqlm.getIDCTPM();
                     lstctpm[i].MaPM = idPM;
-                    MessageBox.Show(lstctpm[i].MaCTPM + " " + lstctpm[i].MaSach + " " + lstctpm[i].NgayTra + " " + lstctpm[i].TienCoc);
+                    //MessageBox.Show(lstctpm[i].MaCTPM + " " + lstctpm[i].MaSach + " " + lstctpm[i].NgayTra + " " + lstctpm[i].TienCoc);
                     check = objctpm.insertData(lstctpm[i]);
                 }
                 if (check)
