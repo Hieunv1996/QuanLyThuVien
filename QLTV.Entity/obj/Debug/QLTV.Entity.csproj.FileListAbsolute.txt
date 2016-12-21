@@ -6,3 +6,4 @@ E:\Code\visualStudio\QuanLyThuVien\QLTV.Entity\bin\Debug\QLTV.Entity.dll
 E:\Code\visualStudio\QuanLyThuVien\QLTV.Entity\bin\Debug\QLTV.Entity.pdb
 E:\Code\visualStudio\QuanLyThuVien\QLTV.Entity\obj\Debug\QLTV.Entity.dll
 E:\Code\visualStudio\QuanLyThuVien\QLTV.Entity\obj\Debug\QLTV.Entity.pdb
+E:\Code\visualStudio\QuanLyThuVien\QLTV.Entity\obj\Debug\QLTV.Entity.csprojResolveAssemblyReference.cache

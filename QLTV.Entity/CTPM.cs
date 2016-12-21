@@ -10,7 +10,7 @@ namespace QLTV.Entity
     public class CTPM
     {
         private string maCTPM;
-        private string maPhieuMuon;
+        private string maPM;
         private string maSach;
         private string ngayTra;
         private int tienCoc;
@@ -28,16 +28,16 @@ namespace QLTV.Entity
             }
         }
 
-        public string MaPhieuMuon
+        public string MaPM
         {
             get
             {
-                return maPhieuMuon;
+                return maPM;
             }
 
             set
             {
-                maPhieuMuon = value;
+                maPM = value;
             }
         }
 
@@ -82,7 +82,7 @@ namespace QLTV.Entity
         public void CTPMIDataReader(SqlDataReader dr)
         {
             MaCTPM = dr["MaCTPM"] is DBNull ? string.Empty : dr["MaCTPM"].ToString();
-            MaPhieuMuon = dr["MaPhieuMuon"] is DBNull ? string.Empty : dr["MaPhieuMuon"].ToString();
+            MaPM = dr["MaPM"] is DBNull ? string.Empty : dr["MaPM"].ToString();
             MaSach = dr["MaSach"] is DBNull ? "" : dr["MaSach"].ToString();
             NgayTra = dr["NgayTra"] is DBNull ? "" : dr["NgayTra"].ToString();
             TienCoc = dr["TienCoc"] is DBNull ? 0 : int.Parse(dr["TienCoc"].ToString());

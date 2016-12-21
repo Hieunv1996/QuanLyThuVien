@@ -58,6 +58,7 @@ namespace QLTV
         private void btnLamTuoi_Click(object sender, EventArgs e)
         {
             clearText();
+            binData("", "", "");
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -80,6 +81,7 @@ namespace QLTV
             if (objdg.insertData(data))
             {
                 clearText();
+                binData("", "", "");
                 MessageBox.Show("Thêm mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }else
             {

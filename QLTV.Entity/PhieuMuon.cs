@@ -9,21 +9,21 @@ namespace QLTV.Entity
 {
     public class PhieuMuon
     {
-        private string maPhieuMuon;
+        private string maPM;
         private string maDocGia;
         private string ngayMuon;
         private int thanhTien;
 
-        public string MaPhieuMuon
+        public string MaPM
         {
             get
             {
-                return maPhieuMuon;
+                return maPM;
             }
 
             set
             {
-                maPhieuMuon = value;
+                maPM = value;
             }
         }
 
@@ -67,10 +67,10 @@ namespace QLTV.Entity
         }
         public void PhieuMuonIDataReader(SqlDataReader dr)
         {
-            MaPhieuMuon = dr["MaPhieuMuon"] is DBNull ? string.Empty : dr["MaPhieuMuon"].ToString();
-            NgayMuon = dr["NgayMuon"] is DBNull ? string.Empty : dr["NgayMuon"].ToString();
-            MaDocGia = dr["MaDocGia"] is DBNull ? "" : dr["MaDocGia"].ToString();
-            ThanhTien = dr["ThanhTien"] is DBNull ? 0 : int.Parse(dr["ThanhTien"].ToString());
+            MaPM = dr["maPM"] is DBNull ? "" : dr["maPM"].ToString();
+            MaDocGia = dr["maDocGia"] is DBNull ? "" : dr["maDocGia"].ToString();
+            NgayMuon = dr["ngayMuon"] is DBNull ? "" : dr["ngayMuon"].ToString();
+            ThanhTien = dr["thanhTien"] is DBNull ? 0 : int.Parse(dr["thanhTien"].ToString());
         }
     }
 }

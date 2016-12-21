@@ -85,6 +85,18 @@
     <Compile Include="frmLoaiSach.Designer.cs">
       <DependentUpon>frmLoaiSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMuon.Designer.cs">
+      <DependentUpon>frmMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLMuon.Designer.cs">
+      <DependentUpon>frmQLMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiSach.resx">
       <DependentUpon>frmLoaiSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMuon.resx">
+      <DependentUpon>frmMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLMuon.resx">
+      <DependentUpon>frmQLMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>

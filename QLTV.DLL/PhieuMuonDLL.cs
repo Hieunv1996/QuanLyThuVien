@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 using QLTV.DAL;
 using QLTV.Entity;
 
-
 namespace QLTV.DLL
 {
     public class PhieuMuonDLL
     {
         PhieuMuonDAL obj = new PhieuMuonDAL();
-        public List<PhieuMuon> getAll(String t, String w, String o)
+
+        public List<PhieuMuon> getAll(string t, string w, string o)
         {
             return obj.getAll(t, w, o);
         }
-
         public bool insertData(PhieuMuon data)
         {
             return obj.insertData(data);

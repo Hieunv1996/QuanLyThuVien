@@ -63,7 +63,7 @@ namespace QLTV.DAL
             try
             {
                 if (cmd.Connection == null) { cmd.Connection = openConnection(); }
-                row = cmd.ExecuteNonQuery();
+                row = (int)cmd.ExecuteNonQuery();
             }
             finally
             {

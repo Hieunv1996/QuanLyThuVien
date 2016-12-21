@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLTV.Entity;
 using System.Data;
 using System.Data.SqlClient;
-using QLTV.Entity;
-
 
 namespace QLTV.DAL
 {
@@ -49,7 +48,7 @@ namespace QLTV.DAL
         public bool insertData(PhieuMuon data)
         {
             bool check = false;
-            String sql = String.Format("INSERT INTO tb_PhieuMuon(maPM, maDocGia, ngayMuon, thanhTien) VALUES('{0}','{1}',''{2},'{3}')", data.MaPhieuMuon, data.MaDocGia, data.NgayMuon, data.ThanhTien);
+            String sql = String.Format("INSERT INTO [dbo].[tb_PhieuMuon]  ([maPM] ,[maDocGia] ,[ngayMuon] ,[thanhTien]) VALUES ('{0}','{1}','{2}','{3}')",data.MaPM,data.MaDocGia,data.NgayMuon,data.ThanhTien);
             openConnection();
             int r = ExecuteNonQuery(sql);
             if (r > 0) check = true;
@@ -60,7 +59,7 @@ namespace QLTV.DAL
         public bool updateData(PhieuMuon data)
         {
             bool check = false;
-            String sql = String.Format("UPDATE tb_PhieuMuon SET maDocGia = '{0}', ngayMuon = '{1}', thanhTien = '{2}' where maPM = '{3}'",data.MaDocGia,data.NgayMuon,data.ThanhTien,data.MaPhieuMuon);
+            String sql = String.Format("UPDATE tb_PhieuMuon SET maDocGia = N'{0}', thanhTien = '{1}' where maPM = '{2}'", data.MaDocGia,data.ThanhTien,data.MaPM);
             openConnection();
             int r = ExecuteNonQuery(sql);
             if (r > 0) check = true;
@@ -68,10 +67,10 @@ namespace QLTV.DAL
             return check;
         }
 
-        public bool deleteData(string id)
+        public bool deleteData(String id)
         {
             bool check = false;
-            String sql = String.Format("DELETE FROM tb_PhieuMuon where maPhieuMuon = '{0}'", id);
+            String sql = String.Format("DELETE FROM tb_PhieuMuon where maPM = '{0}'", id);
             openConnection();
             int r = ExecuteNonQuery(sql);
             if (r > 0) check = true;

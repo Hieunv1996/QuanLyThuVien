@@ -49,7 +49,7 @@ namespace QLTV.DAL
         public bool insertData(CTPM data)
         {
             bool check = false;
-            String sql = String.Format("INSERT INTO tb_CTPM(maCTPM, maPM, maSach, ngayTra) VALUES('{0}','{1}','{2}','{3}')",data.MaCTPM,data.MaPhieuMuon,data.MaSach,data.NgayTra);
+            String sql = String.Format("INSERT INTO tb_CTPM(maCTPM, maPM, maSach, ngayTra,tienCoc) VALUES('{0}','{1}','{2}','{3}','{4}')",data.MaCTPM,data.MaPM,data.MaSach,data.NgayTra,data.TienCoc);
             openConnection();
             int r = ExecuteNonQuery(sql);
             if (r > 0) check = true;
@@ -60,7 +60,7 @@ namespace QLTV.DAL
         public bool updateData(CTPM data)
         {
             bool check = false;
-            String sql = String.Format("UPDATE tb_CTPM SET maPM = '{0}', maSach ='{1}', ngayTra ='{2}' where maCTPM = '{3}'",data.MaPhieuMuon,data.MaSach,data.NgayTra,data.MaCTPM);
+            String sql = String.Format("UPDATE tb_CTPM SET maSach ='{0}', ngayTra ='{1}', tienCoc = {2} where maCTPM = '{3}'",data.MaSach,data.NgayTra,data.TienCoc,data.MaCTPM);
             openConnection();
             int r = ExecuteNonQuery(sql);
             if (r > 0) check = true;
