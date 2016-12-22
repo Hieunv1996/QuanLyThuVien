@@ -71,7 +71,7 @@ namespace QLTV.DAL
         public bool deleteData(string id)
         {
             bool check = false;
-            String sql = String.Format("DELETE FROM tb_PhieuTra where maPhieuTra = '{0}'", id);
+            String sql = String.Format("DELETE FROM tb_PhieuTra where maPT = '{0}'", id);
             openConnection();
             int r = ExecuteNonQuery(sql);
             if (r > 0) check = true;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLMuon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTimKiemPM = new System.Windows.Forms.TextBox();
             this.btnTimKiemPM = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamTuoi = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMuon)).BeginInit();
             this.panel2.SuspendLayout();
@@ -50,6 +52,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.txtTimKiemPM);
             this.panel1.Controls.Add(this.btnTimKiemPM);
             this.panel1.Controls.Add(this.dgvPhieuMuon);
@@ -90,6 +93,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.panel2.Controls.Add(this.txtTimKiemCTPM);
             this.panel2.Controls.Add(this.btnTimKiemCTPM);
             this.panel2.Controls.Add(this.dgvCTPM);
@@ -129,6 +133,8 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel3.Controls.Add(this.btnQuayLai);
             this.panel3.Controls.Add(this.btnXoa);
             this.panel3.Controls.Add(this.btnSua);
             this.panel3.Controls.Add(this.btnThem);
@@ -140,7 +146,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(702, 6);
+            this.btnXoa.Location = new System.Drawing.Point(592, 6);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 48);
             this.btnXoa.TabIndex = 1;
@@ -150,7 +156,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(484, 6);
+            this.btnSua.Location = new System.Drawing.Point(398, 6);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 48);
             this.btnSua.TabIndex = 1;
@@ -160,7 +166,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(267, 6);
+            this.btnThem.Location = new System.Drawing.Point(220, 6);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 48);
             this.btnThem.TabIndex = 1;
@@ -170,13 +176,23 @@
             // 
             // btnLamTuoi
             // 
-            this.btnLamTuoi.Location = new System.Drawing.Point(77, 6);
+            this.btnLamTuoi.Location = new System.Drawing.Point(54, 6);
             this.btnLamTuoi.Name = "btnLamTuoi";
             this.btnLamTuoi.Size = new System.Drawing.Size(75, 48);
             this.btnLamTuoi.TabIndex = 1;
             this.btnLamTuoi.Text = "&Làm Tươi";
             this.btnLamTuoi.UseVisualStyleBackColor = true;
             this.btnLamTuoi.Click += new System.EventHandler(this.btnLamTuoi_Click);
+            // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.Location = new System.Drawing.Point(856, 6);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(75, 48);
+            this.btnQuayLai.TabIndex = 1;
+            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // frmQLMuon
             // 
@@ -186,8 +202,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQLMuon";
-            this.Text = "frmQLMuon";
+            this.Text = "Quản Lý Mượn Sách | Phần Mềm Quản Lý Thư Viện";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQLMuon_FormClosing);
             this.Load += new System.EventHandler(this.frmQLMuon_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -215,5 +233,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamTuoi;
+        private System.Windows.Forms.Button btnQuayLai;
     }
 }

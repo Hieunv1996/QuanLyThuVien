@@ -14,6 +14,9 @@ namespace QLTV
 {
     public partial class frmQLMuon : Form
     {
+
+        bool formClose = true;
+
         PhieuMuonDLL objpm = new PhieuMuonDLL();
         CTPMDLL objctpm = new CTPMDLL();
 
@@ -165,6 +168,17 @@ namespace QLTV
             lstctpm = objctpm.getAll("", "maPM = '" + id + "'", "");
             idDocGia = dgvPhieuMuon.CurrentRow.Cells[1].Value.ToString();
             new frmMuon(true).ShowDialog();
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            new frmHeThong().Show();
+            this.Hide();
+        }
+
+        private void frmQLMuon_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

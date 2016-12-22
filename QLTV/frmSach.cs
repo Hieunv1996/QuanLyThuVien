@@ -14,6 +14,8 @@ namespace QLTV
 {
     public partial class frmSach : Form
     {
+        bool formClose = true;
+
         SachDLL objs = new SachDLL();
         LoaiSachDLL objls = new LoaiSachDLL();
         public frmSach()
@@ -203,6 +205,17 @@ namespace QLTV
                     MessageBox.Show("Sửa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            new frmHeThong().Show();
+            this.Hide();
+        }
+
+        private void frmSach_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -32,5 +32,9 @@ namespace QLTV.DLL
         {
             return obj.deleteAllData(id);
         }
+        public int dateDiff(String d1, String d2)
+        {
+            return obj.dateDiff(d1, d2);
+        }
     }
 }

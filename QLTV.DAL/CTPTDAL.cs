@@ -87,5 +87,14 @@ namespace QLTV.DAL
                 closeConnection();
                 return check;
             }
+        public int dateDiff(String d1, String d2)
+        {
+            int dateDiff = 0;
+            string sql = "SELECT DATEDIFF(day,'" + d1 + "','" + d2 + "') AS diffDate";
+            openConnection();
+            dateDiff = (int)ExecuteScalar(sql);
+            closeConnection();
+            return dateDiff;
         }
+    }
 }

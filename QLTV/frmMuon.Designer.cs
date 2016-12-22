@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMuon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cmbDocGia = new System.Windows.Forms.ComboBox();
@@ -56,6 +57,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -67,6 +69,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.cmbDocGia);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(479, 4);
@@ -93,6 +96,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.btnHuyBo);
             this.panel3.Controls.Add(this.btnThemPM);
             this.panel3.Location = new System.Drawing.Point(479, 178);
@@ -121,6 +125,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnSua);
@@ -137,6 +142,7 @@
             // 
             // btnThem
             // 
+            this.btnThem.Image = global::QLTV.Properties.Resources.add;
             this.btnThem.Location = new System.Drawing.Point(39, 105);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 44);
@@ -147,6 +153,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Image = global::QLTV.Properties.Resources.delete;
             this.btnXoa.Location = new System.Drawing.Point(354, 105);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 44);
@@ -157,6 +164,7 @@
             // 
             // btnSua
             // 
+            this.btnSua.Image = global::QLTV.Properties.Resources.edit;
             this.btnSua.Location = new System.Drawing.Point(193, 105);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 44);
@@ -241,8 +249,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 409);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMuon";
-            this.Text = "frmMuon";
+            this.Text = "Thêm - Sửa Phiếu Mượn | Phần Mềm Quản Lý Thư Viện";
             this.Load += new System.EventHandler(this.frmMuon_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

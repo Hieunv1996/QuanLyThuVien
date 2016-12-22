@@ -14,12 +14,47 @@ namespace QLTV
 {
     public partial class frmQLTra : Form
     {
+        bool formClose = true;
+
         PhieuTraDLL objpt = new PhieuTraDLL();
         CTPTDLL objctpt = new CTPTDLL();
 
         public frmQLTra()
         {
             InitializeComponent();
+        }
+
+        public string getIDPT()
+        {
+            string id = "PT";
+            int a = 0;
+            List<PhieuTra> lst = new List<PhieuTra>();
+            lst = objpt.getAll("", "", "");
+            try
+            {
+                for (int i = 0; i < lst.Count; i++)
+                {
+                    if (int.Parse(lst[i].MaPhieuTra.Substring(2)) > a) a = int.Parse(lst[i].MaPhieuTra.Substring(2));
+                }
+            }
+            catch { }
+            return id + (a + 1);
+        }
+        public string getIDCTPT()
+        {
+            string id = "CTPT";
+            int a = 0;
+            List<CTPT> lst = new List<CTPT>();
+            lst = objctpt.getAll("", "", "");
+            try
+            {
+                for (int i = 0; i < lst.Count; i++)
+                {
+                    if (int.Parse(lst[i].MaCTPT.Substring(4)) > a) a = int.Parse(lst[i].MaCTPT.Substring(4));
+                }
+            }
+            catch { }
+            return (id + (a + 1));
         }
 
         private void frmQLTra_Load(object sender, EventArgs e)
@@ -83,6 +118,49 @@ namespace QLTV
         private void btnThem_Click(object sender, EventArgs e)
         {
             new frmTra().ShowDialog();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int r = -1;
+            try
+            {
+                r = dgvPT.CurrentCell.RowIndex;
+            }
+            catch { }
+            if(r < 0)
+            {
+                MessageBox.Show("Chọn một phiếu trả trước!");
+                return;
+            }
+            String id = dgvPT.CurrentRow.Cells[0].Value.ToString();
+            bool check = false;
+            if(MessageBox.Show("Bạn muốn xóa phiếu trả này?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                check = objctpt.deleteAllData(id);
+                check = objpt.deleteData(id);
+                if (check)
+                {
+                    binDataPT("", "", "");
+                    binDataCTPT("", "", "");
+                    MessageBox.Show("Xóa phiếu trả thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa phiếu trả không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            new frmHeThong().Show();
+            this.Hide();
+        }
+
+        private void frmQLTra_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

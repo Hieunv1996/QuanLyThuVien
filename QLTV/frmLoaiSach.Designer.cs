@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiSach));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLamTuoi = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -62,13 +64,16 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(102, 28);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(288, 20);
+            this.txtTimKiem.Size = new System.Drawing.Size(288, 23);
             this.txtTimKiem.TabIndex = 2;
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Image = global::QLTV.Properties.Resources.find;
             this.btnTimKiem.Location = new System.Drawing.Point(415, 19);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 37);
@@ -93,6 +98,7 @@
             // 
             this.panel2.Controls.Add(this.btnLamTuoi);
             this.panel2.Controls.Add(this.btnThem);
+            this.panel2.Controls.Add(this.btnBack);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Location = new System.Drawing.Point(12, 415);
@@ -102,9 +108,11 @@
             // 
             // btnLamTuoi
             // 
-            this.btnLamTuoi.Location = new System.Drawing.Point(70, 3);
+            this.btnLamTuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamTuoi.Image = global::QLTV.Properties.Resources.refresh;
+            this.btnLamTuoi.Location = new System.Drawing.Point(34, 4);
             this.btnLamTuoi.Name = "btnLamTuoi";
-            this.btnLamTuoi.Size = new System.Drawing.Size(75, 47);
+            this.btnLamTuoi.Size = new System.Drawing.Size(91, 47);
             this.btnLamTuoi.TabIndex = 1;
             this.btnLamTuoi.Text = "&Làm Tươi";
             this.btnLamTuoi.UseVisualStyleBackColor = true;
@@ -112,7 +120,9 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(238, 3);
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::QLTV.Properties.Resources.add;
+            this.btnThem.Location = new System.Drawing.Point(187, 3);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 48);
             this.btnThem.TabIndex = 1;
@@ -120,9 +130,23 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Image = global::QLTV.Properties.Resources.back;
+            this.btnBack.Location = new System.Drawing.Point(674, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 47);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Quay Lại";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(572, 3);
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = global::QLTV.Properties.Resources.delete;
+            this.btnXoa.Location = new System.Drawing.Point(507, 3);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 47);
             this.btnXoa.TabIndex = 1;
@@ -132,7 +156,9 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(406, 3);
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = global::QLTV.Properties.Resources.edit;
+            this.btnSua.Location = new System.Drawing.Point(340, 4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 47);
             this.btnSua.TabIndex = 1;
@@ -156,32 +182,36 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(31, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(48, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Mô Tả";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(31, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(100, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tên Loại Sách";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(31, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(94, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Mã Loại Sách";
             // 
             // txtMota
             // 
+            this.txtMota.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMota.Location = new System.Drawing.Point(34, 253);
             this.txtMota.Multiline = true;
             this.txtMota.Name = "txtMota";
@@ -190,16 +220,18 @@
             // 
             // txtTenLoaiSach
             // 
+            this.txtTenLoaiSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenLoaiSach.Location = new System.Drawing.Point(34, 155);
             this.txtTenLoaiSach.Name = "txtTenLoaiSach";
-            this.txtTenLoaiSach.Size = new System.Drawing.Size(195, 20);
+            this.txtTenLoaiSach.Size = new System.Drawing.Size(195, 23);
             this.txtTenLoaiSach.TabIndex = 2;
             // 
             // txtMaLoaiSach
             // 
+            this.txtMaLoaiSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLoaiSach.Location = new System.Drawing.Point(34, 67);
             this.txtMaLoaiSach.Name = "txtMaLoaiSach";
-            this.txtMaLoaiSach.Size = new System.Drawing.Size(195, 20);
+            this.txtMaLoaiSach.Size = new System.Drawing.Size(195, 23);
             this.txtMaLoaiSach.TabIndex = 2;
             // 
             // frmLoaiSach
@@ -210,8 +242,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLoaiSach";
-            this.Text = "frmLoaiSach";
+            this.Text = "Quản Lý Danh Mục Sách | Phần Mềm Quản Lý Thư Viện";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLoaiSach_FormClosing);
             this.Load += new System.EventHandler(this.frmLoaiSach_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -241,5 +275,6 @@
         private System.Windows.Forms.TextBox txtMota;
         private System.Windows.Forms.TextBox txtTenLoaiSach;
         private System.Windows.Forms.TextBox txtMaLoaiSach;
+        private System.Windows.Forms.Button btnBack;
     }
 }

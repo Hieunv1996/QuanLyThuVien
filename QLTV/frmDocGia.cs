@@ -15,6 +15,8 @@ namespace QLTV
 {
     public partial class frmDocGia : Form
     {
+        bool formClose = true;
+
         DocGiaDLL objdg = new DocGiaDLL();
         public frmDocGia()
         {
@@ -148,6 +150,17 @@ namespace QLTV
         {
             String w = "tenDocGia like '%" + txtTimKiem.Text + "%'";
             binData("", w, "");
+        }
+
+        private void frmDocGia_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            new frmHeThong().Show();
+            this.Hide();
         }
     }
 }

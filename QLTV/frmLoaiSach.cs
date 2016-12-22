@@ -13,6 +13,8 @@ namespace QLTV
 {
     public partial class frmLoaiSach : Form
     {
+
+        bool formClose = true;
         LoaiSachDLL objls = new LoaiSachDLL();
         public frmLoaiSach()
         {
@@ -149,6 +151,17 @@ namespace QLTV
         {
             string w = "tenLoaiSach like '%" + txtTimKiem.Text + "%'";
             binData("", w, "");
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            new frmHeThong().Show();
+            this.Hide();
+        }
+
+        private void frmLoaiSach_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLTra));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnTimKiemPT = new System.Windows.Forms.Button();
             this.dgvPT = new System.Windows.Forms.DataGridView();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPT)).BeginInit();
@@ -52,6 +54,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.DarkKhaki;
+            this.panel1.Controls.Add(this.btnQuayLai);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnThem);
@@ -69,6 +74,7 @@
             this.btnXoa.TabIndex = 0;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -101,6 +107,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel2.Controls.Add(this.txtTimKiemCTPT);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btnTimKiemCTPT);
@@ -140,6 +148,7 @@
             // 
             this.dgvCTPT.AllowUserToAddRows = false;
             this.dgvCTPT.AllowUserToDeleteRows = false;
+            this.dgvCTPT.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCTPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCTPT.Location = new System.Drawing.Point(3, 93);
             this.dgvCTPT.MultiSelect = false;
@@ -152,6 +161,8 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel3.Controls.Add(this.txtTimKiemPT);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnTimKiemPT);
@@ -189,6 +200,7 @@
             // 
             // dgvPT
             // 
+            this.dgvPT.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPT.Location = new System.Drawing.Point(3, 93);
             this.dgvPT.MultiSelect = false;
@@ -199,6 +211,16 @@
             this.dgvPT.TabIndex = 0;
             this.dgvPT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPT_CellClick);
             // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.Location = new System.Drawing.Point(742, 20);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(75, 33);
+            this.btnQuayLai.TabIndex = 0;
+            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            // 
             // frmQLTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,8 +229,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQLTra";
-            this.Text = "Quản Lý Trả Sách";
+            this.Text = "Quản Lý Trả Sách | Phần Mềm Quản Lý Thư Viện";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQLTra_FormClosing);
             this.Load += new System.EventHandler(this.frmQLTra_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -238,5 +262,6 @@
         private System.Windows.Forms.TextBox txtTimKiemPT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTimKiemPT;
+        private System.Windows.Forms.Button btnQuayLai;
     }
 }
