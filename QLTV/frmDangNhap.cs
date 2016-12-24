@@ -8,14 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLTV.DLL;
+using QLTV.Entity;
 
 namespace QLTV
 {
     public partial class frmDangNhap : Form
     {
-        bool formClose = true;
+        
 
         NguoiDungDLL obj = new NguoiDungDLL();
+        public static NguoiDung user = new NguoiDung();
         public frmDangNhap()
         {
             InitializeComponent();
@@ -25,6 +27,8 @@ namespace QLTV
         {
             if (obj.getLogin(txtTaiKhoan.Text, txtMatKhau.Text))
             {
+                user.TaiKhoan = txtTaiKhoan.Text;
+                user.MatKhau = txtMatKhau.Text;
                 lbInfo.Text = "Đăng Nhập Thành Công!";
                 MessageBox.Show("Bạn đã đăng nhập với tên " + txtTaiKhoan.Text + "!","Thông báo!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 new frmHeThong().Show();

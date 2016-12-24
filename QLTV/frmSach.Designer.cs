@@ -50,10 +50,11 @@
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLamTuoi = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuongTon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbNamXuatBan)).BeginInit();
@@ -260,6 +261,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel3.Controls.Add(this.btnXuat);
             this.panel3.Controls.Add(this.btnLamTuoi);
             this.panel3.Controls.Add(this.btnQuayLai);
             this.panel3.Controls.Add(this.btnXoa);
@@ -272,7 +274,7 @@
             // 
             // btnLamTuoi
             // 
-            this.btnLamTuoi.Location = new System.Drawing.Point(74, 3);
+            this.btnLamTuoi.Location = new System.Drawing.Point(16, 7);
             this.btnLamTuoi.Name = "btnLamTuoi";
             this.btnLamTuoi.Size = new System.Drawing.Size(75, 44);
             this.btnLamTuoi.TabIndex = 3;
@@ -280,9 +282,19 @@
             this.btnLamTuoi.UseVisualStyleBackColor = true;
             this.btnLamTuoi.Click += new System.EventHandler(this.btnLamTuoi_Click);
             // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.Location = new System.Drawing.Point(821, 7);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(75, 44);
+            this.btnQuayLai.TabIndex = 3;
+            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(611, 3);
+            this.btnXoa.Location = new System.Drawing.Point(463, 7);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 44);
             this.btnXoa.TabIndex = 3;
@@ -292,7 +304,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(412, 3);
+            this.btnSua.Location = new System.Drawing.Point(314, 7);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 44);
             this.btnSua.TabIndex = 3;
@@ -302,7 +314,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(230, 3);
+            this.btnThem.Location = new System.Drawing.Point(162, 7);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 44);
             this.btnThem.TabIndex = 3;
@@ -310,15 +322,15 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // btnQuayLai
+            // btnXuat
             // 
-            this.btnQuayLai.Location = new System.Drawing.Point(794, 3);
-            this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(75, 44);
-            this.btnQuayLai.TabIndex = 3;
-            this.btnQuayLai.Text = "Quay Lại";
-            this.btnQuayLai.UseVisualStyleBackColor = true;
-            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            this.btnXuat.Location = new System.Drawing.Point(636, 7);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(75, 44);
+            this.btnXuat.TabIndex = 4;
+            this.btnXuat.Text = "Xuất DS";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // frmSach
             // 
@@ -373,5 +385,6 @@
         private System.Windows.Forms.TextBox txtTieuDe;
         private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.Button btnQuayLai;
+        private System.Windows.Forms.Button btnXuat;
     }
 }

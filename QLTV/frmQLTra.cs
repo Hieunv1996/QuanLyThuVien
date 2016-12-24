@@ -14,11 +14,9 @@ namespace QLTV
 {
     public partial class frmQLTra : Form
     {
-        bool formClose = true;
-
         PhieuTraDLL objpt = new PhieuTraDLL();
         CTPTDLL objctpt = new CTPTDLL();
-
+        public static List<CTPT> lstctpt = new List<CTPT>();
         public frmQLTra()
         {
             InitializeComponent();
@@ -161,6 +159,26 @@ namespace QLTV
         private void frmQLTra_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            int r = -1;
+            try
+            {
+                r = dgvPT.CurrentCell.RowIndex;
+            }
+            catch { }
+            if (r < 0)
+            {
+                MessageBox.Show("Chọn một phiếu trả trước!");
+                return;
+            }
+            new frmPTReport(dgvPT.CurrentRow.Cells[0].Value.ToString(), dgvPT.CurrentRow.Cells[1].Value.ToString(), dgvPT.CurrentRow.Cells[3].Value.ToString()).ShowDialog();
         }
     }
 }

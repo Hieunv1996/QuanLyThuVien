@@ -88,9 +88,9 @@
             this.lbInfo.ForeColor = System.Drawing.Color.Red;
             this.lbInfo.Location = new System.Drawing.Point(156, 175);
             this.lbInfo.Name = "lbInfo";
-            this.lbInfo.Size = new System.Drawing.Size(51, 20);
+            this.lbInfo.Size = new System.Drawing.Size(18, 20);
             this.lbInfo.TabIndex = 4;
-            this.lbInfo.Text = "label3";
+            this.lbInfo.Text = "_";
             this.lbInfo.Click += new System.EventHandler(this.lbInfo_Click);
             // 
             // pictureBox1

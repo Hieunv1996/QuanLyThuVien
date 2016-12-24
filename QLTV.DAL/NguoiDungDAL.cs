@@ -30,5 +30,15 @@ namespace QLTV.DAL
             }
             return check;
         }
+        public bool updateData(NguoiDung data)
+        {
+            bool check = false;
+            String sql = String.Format("UPDATE tb_NguoiDUng SET matKhau = '{0}' where taiKhoan = '{1}'", data.MatKhau, data.TaiKhoan);
+            openConnection();
+            int r = ExecuteNonQuery(sql);
+            if (r > 0) check = true;
+            closeConnection();
+            return check;
+        }
     }
 }

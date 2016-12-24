@@ -163,6 +163,10 @@ namespace QLTV
                 if (check)
                 {
                     MessageBox.Show("Tạo phiếu mượn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if(MessageBox.Show("Bạn có muốn xuất phiếu nhập?","Thông báo!",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        new frmPMReport(pm.MaDocGia, pm.ThanhTien.ToString(), pm.MaPM).ShowDialog();
+                    }
                 }
                 else
                 {
@@ -215,7 +219,12 @@ namespace QLTV
                     if (check)
                     {
                         MessageBox.Show("Sửa phiếu mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }else
+                        if (MessageBox.Show("Bạn có muốn xuất phiếu nhập?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            new frmPMReport(pm.MaDocGia, pm.ThanhTien.ToString(), pm.MaPM).ShowDialog();
+                        }
+                    }
+                    else
                     {
                         MessageBox.Show("Sửa phiếu mượn không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

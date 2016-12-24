@@ -38,11 +38,12 @@
             this.btnTimKiemCTPM = new System.Windows.Forms.Button();
             this.dgvCTPM = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLamTuoi = new System.Windows.Forms.Button();
-            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMuon)).BeginInit();
             this.panel2.SuspendLayout();
@@ -134,6 +135,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel3.Controls.Add(this.btnXuat);
             this.panel3.Controls.Add(this.btnQuayLai);
             this.panel3.Controls.Add(this.btnXoa);
             this.panel3.Controls.Add(this.btnSua);
@@ -144,9 +146,19 @@
             this.panel3.Size = new System.Drawing.Size(1020, 61);
             this.panel3.TabIndex = 0;
             // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.Location = new System.Drawing.Point(849, 6);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(75, 48);
+            this.btnQuayLai.TabIndex = 1;
+            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(592, 6);
+            this.btnXoa.Location = new System.Drawing.Point(520, 6);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 48);
             this.btnXoa.TabIndex = 1;
@@ -156,7 +168,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(398, 6);
+            this.btnSua.Location = new System.Drawing.Point(353, 6);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 48);
             this.btnSua.TabIndex = 1;
@@ -166,7 +178,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(220, 6);
+            this.btnThem.Location = new System.Drawing.Point(197, 6);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 48);
             this.btnThem.TabIndex = 1;
@@ -184,15 +196,15 @@
             this.btnLamTuoi.UseVisualStyleBackColor = true;
             this.btnLamTuoi.Click += new System.EventHandler(this.btnLamTuoi_Click);
             // 
-            // btnQuayLai
+            // btnXuat
             // 
-            this.btnQuayLai.Location = new System.Drawing.Point(856, 6);
-            this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(75, 48);
-            this.btnQuayLai.TabIndex = 1;
-            this.btnQuayLai.Text = "Quay Lại";
-            this.btnQuayLai.UseVisualStyleBackColor = true;
-            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
+            this.btnXuat.Location = new System.Drawing.Point(686, 6);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(75, 46);
+            this.btnXuat.TabIndex = 2;
+            this.btnXuat.Text = "Xuất Phiếu Mượn";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // frmQLMuon
             // 
@@ -234,5 +246,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLamTuoi;
         private System.Windows.Forms.Button btnQuayLai;
+        private System.Windows.Forms.Button btnXuat;
     }
 }

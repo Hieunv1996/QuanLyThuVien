@@ -14,7 +14,7 @@ namespace QLTV
     public partial class frmLoaiSach : Form
     {
 
-        bool formClose = true;
+        
         LoaiSachDLL objls = new LoaiSachDLL();
         public frmLoaiSach()
         {

@@ -15,7 +15,7 @@ namespace QLTV
 {
     public partial class frmDocGia : Form
     {
-        bool formClose = true;
+        
 
         DocGiaDLL objdg = new DocGiaDLL();
         public frmDocGia()

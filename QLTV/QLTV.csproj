@@ -36,6 +36,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="QLTV.DLL">
       <HintPath>..\QLTV.DLL\bin\Debug\QLTV.DLL.dll</HintPath>
     </Reference>
@@ -44,6 +46,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +76,12 @@
     <Compile Include="frmDocGia.Designer.cs">
       <DependentUpon>frmDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +99,18 @@
     </Compile>
     <Compile Include="frmMuon.Designer.cs">
       <DependentUpon>frmMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPMReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPMReport.Designer.cs">
+      <DependentUpon>frmPMReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPTReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPTReport.Designer.cs">
+      <DependentUpon>frmPTReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQLMuon.cs">
       <SubType>Form</SubType>
@@ -109,6 +130,12 @@
     <Compile Include="frmSach.Designer.cs">
       <DependentUpon>frmSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSachReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSachReport.Designer.cs">
+      <DependentUpon>frmSachReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,11 +144,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLTVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTVDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDocGia.resx">
       <DependentUpon>frmDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHeThong.resx">
       <DependentUpon>frmHeThong.cs</DependentUpon>
@@ -132,6 +167,12 @@
     <EmbeddedResource Include="frmMuon.resx">
       <DependentUpon>frmMuon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPMReport.resx">
+      <DependentUpon>frmPMReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPTReport.resx">
+      <DependentUpon>frmPTReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLMuon.resx">
       <DependentUpon>frmQLMuon.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +182,9 @@
     <EmbeddedResource Include="frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSachReport.resx">
+      <DependentUpon>frmSachReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTra.resx">
       <DependentUpon>frmTra.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +193,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rpPM.rdlc" />
+    <EmbeddedResource Include="rpPT.rdlc" />
+    <EmbeddedResource Include="rpSach.rdlc" />
+    <EmbeddedResource Include="rpSach1.rdlc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,6 +216,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLTVDataSet.xsc">
+      <DependentUpon>QLTVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLTVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTVDataSet.xss">
+      <DependentUpon>QLTVDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\login.png" />
   </ItemGroup>
   <ItemGroup>

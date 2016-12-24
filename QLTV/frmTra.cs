@@ -29,6 +29,8 @@ namespace QLTV
         {
             InitializeComponent();
         }
+        
+
 
         private void frmTra_Load(object sender, EventArgs e)
         {
@@ -64,8 +66,9 @@ namespace QLTV
 
         void binDataCTPM()
         {
-            dgvSachMuon.DataSource = lstctpm;
-            dgvSachMuon.Columns[0].Visible = false;
+            
+                dgvSachMuon.DataSource = lstctpm;
+                dgvSachMuon.Columns[0].Visible = false;
         }
         void binDataCTPT()
         {
@@ -106,18 +109,21 @@ namespace QLTV
                 r = dgvSachMuon.CurrentCell.RowIndex;
             }
             catch { }
-            if(r < 0) { return; }
-            cmbTieuDeSach.SelectedValue = dgvSachMuon.CurrentRow.Cells[2].Value.ToString();
-            int dateDiff = objctpt.dateDiff(dgvSachMuon.CurrentRow.Cells[3].Value.ToString().Substring(0,10),DateTime.Today.ToShortDateString());
+            if (r < 0) {
+                MessageBox.Show("Chọn một bản ghi trước!", "Thông báo!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; }
+                cmbTieuDeSach.SelectedValue = dgvSachMuon.CurrentRow.Cells[2].Value.ToString();
+                int dateDiff = objctpt.dateDiff(dgvSachMuon.CurrentRow.Cells[3].Value.ToString().Substring(0, 10), DateTime.Today.ToShortDateString());
 
-            if(dateDiff <= 0)
-            {
-                rdbKhong.Text = "Không";
-            }else
-            {
-                rdbKhong.Text = "Quá hạn " + dateDiff + " ngày";
-                nbPhatQuaHan.Value = dateDiff * 1000;
-            }
+                if (dateDiff <= 0)
+                {
+                    rdbKhong.Text = "Không";
+                }
+                else
+                {
+                    rdbKhong.Text = "Quá hạn " + dateDiff + " ngày";
+                    nbPhatQuaHan.Value = dateDiff * 1000;
+                }
         }
 
         private void cmbTenDocGia_SelectedIndexChanged(object sender, EventArgs e)
@@ -168,9 +174,9 @@ namespace QLTV
             {
                 if (lstctpm[i].MaCTPM.Equals(ctpm))
                 {
-                    MessageBox.Show(lstctpm[i].MaCTPM + " " + ctpm + " " + lstctpm.Count.ToString());
+                    //MessageBox.Show(lstctpm[i].MaCTPM + " " + ctpm + " " + lstctpm.Count.ToString());
                     lstctpm.Remove(lstctpm[i]);
-                    MessageBox.Show(lstctpm.Count.ToString());
+                   // MessageBox.Show(lstctpm.Count.ToString());
                     break;
                 }
             }
@@ -187,9 +193,9 @@ namespace QLTV
             dgvSachTra.DataSource = null;
             binDataCTPM();
             binDataCTPT();
-            //cmbTieuDeSach.SelectedIndex = -1;
-            //nbPhatHuHong.Value = 0;
-            //nbPhatQuaHan.Value = 0;
+            cmbTieuDeSach.SelectedIndex = -1;
+            nbPhatHuHong.Value = 0;
+            nbPhatQuaHan.Value = 0;
             rdbKhong.Text = "Không";
         }
         void clearAll()
@@ -261,6 +267,10 @@ namespace QLTV
             if (check)
             {
                 MessageBox.Show("Tạo phiếu trả thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(MessageBox.Show("Bạn muốn xuất phiếu trả?","Thông báo!",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    new frmPTReport(data.MaPhieuTra, data.MaDocGia, data.ThanhTien.ToString()).ShowDialog();
+                }
             }else
             {
                 MessageBox.Show("Tạo phiếu trả không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

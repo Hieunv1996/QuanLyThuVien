@@ -15,7 +15,7 @@ namespace QLTV
     public partial class frmQLMuon : Form
     {
 
-        bool formClose = true;
+        
 
         PhieuMuonDLL objpm = new PhieuMuonDLL();
         CTPMDLL objctpm = new CTPMDLL();
@@ -179,6 +179,20 @@ namespace QLTV
         private void frmQLMuon_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            int r = dgvPhieuMuon.CurrentCell.RowIndex;
+            if (r < 0)
+            {
+                MessageBox.Show("Chọn một bản ghi trước!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            string maPM = dgvPhieuMuon.CurrentRow.Cells[0].Value.ToString();
+            string maDG = dgvPhieuMuon.CurrentRow.Cells[1].Value.ToString();
+            string thanhTien = dgvPhieuMuon.CurrentRow.Cells[3].Value.ToString();
+            new frmPMReport(maDG, thanhTien, maPM).ShowDialog();
         }
     }
 }

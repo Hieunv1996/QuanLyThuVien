@@ -13,7 +13,7 @@ namespace QLTV
     public partial class frmHeThong : Form
     {
 
-        bool formClose = true;
+        
         public frmHeThong()
         {
             InitializeComponent();
@@ -21,24 +21,12 @@ namespace QLTV
 
         private void frmHeThong_Load(object sender, EventArgs e)
         {
-
+            lbXinChao.Text = frmDangNhap.user.TaiKhoan;
         }
 
         private void frmHeThong_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (formClose)
-            {
-                formClose = false;
-                if (MessageBox.Show("Bạn muốn đóng phần mềm?", "Thông báo!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    Application.Exit();
-                }
-                else
-                {
-                    e.Cancel = true;
-                    formClose = true;
-                }
-            }
+            Application.Exit();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -80,6 +68,16 @@ namespace QLTV
         {
             new frmDangNhap().Show();
             this.Hide();
+        }
+
+        private void lb1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDoiMK_Click(object sender, EventArgs e)
+        {
+            new frmDoiMatKhau().ShowDialog();
         }
     }
 }

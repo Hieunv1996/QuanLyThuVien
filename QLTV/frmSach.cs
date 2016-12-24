@@ -14,7 +14,7 @@ namespace QLTV
 {
     public partial class frmSach : Form
     {
-        bool formClose = true;
+        
 
         SachDLL objs = new SachDLL();
         LoaiSachDLL objls = new LoaiSachDLL();
@@ -216,6 +216,11 @@ namespace QLTV
         private void frmSach_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            new frmSachReport().ShowDialog();
         }
     }
 }
