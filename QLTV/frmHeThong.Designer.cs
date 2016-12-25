@@ -41,7 +41,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCaiDat = new System.Windows.Forms.Button();
             this.btnDoiMK = new System.Windows.Forms.Button();
             this.lb1 = new System.Windows.Forms.Label();
             this.lbXinChao = new System.Windows.Forms.Label();
@@ -94,8 +94,9 @@
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(233, 80);
             this.btnBaoCao.TabIndex = 0;
-            this.btnBaoCao.Text = "BÁO CÁO - THỐNG KÊ";
+            this.btnBaoCao.Text = "THÔNG TIN PHẦN MỀM";
             this.btnBaoCao.UseVisualStyleBackColor = false;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             // 
             // btnQLTra
             // 
@@ -167,7 +168,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.btnThoat);
             this.panel2.Controls.Add(this.btnDangXuat);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnCaiDat);
             this.panel2.Controls.Add(this.btnDoiMK);
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Name = "panel2";
@@ -202,18 +203,19 @@
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // button1
+            // btnCaiDat
             // 
-            this.button1.BackColor = System.Drawing.Color.YellowGreen;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(4, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(233, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Hướng Dẫn Sử Dụng";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCaiDat.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnCaiDat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCaiDat.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDat.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCaiDat.Location = new System.Drawing.Point(4, 130);
+            this.btnCaiDat.Name = "btnCaiDat";
+            this.btnCaiDat.Size = new System.Drawing.Size(233, 48);
+            this.btnCaiDat.TabIndex = 0;
+            this.btnCaiDat.Text = "Cài Đặt";
+            this.btnCaiDat.UseVisualStyleBackColor = false;
+            this.btnCaiDat.Click += new System.EventHandler(this.btnCaiDat_Click);
             // 
             // btnDoiMK
             // 
@@ -288,7 +290,7 @@
         private System.Windows.Forms.Button btnBaoCao;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCaiDat;
         private System.Windows.Forms.Label lb1;
         private System.Windows.Forms.Label lbXinChao;
     }

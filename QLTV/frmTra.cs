@@ -122,7 +122,7 @@ namespace QLTV
                 else
                 {
                     rdbKhong.Text = "Quá hạn " + dateDiff + " ngày";
-                    nbPhatQuaHan.Value = dateDiff * 1000;
+                    nbPhatQuaHan.Value = dateDiff * frmCaiDat.phatQH;
                 }
         }
 
@@ -281,6 +281,11 @@ namespace QLTV
         private void btnHuyBo_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void dgvSachMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

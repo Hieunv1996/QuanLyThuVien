@@ -79,5 +79,15 @@ namespace QLTV
         {
             new frmDoiMatKhau().ShowDialog();
         }
+
+        private void btnCaiDat_Click(object sender, EventArgs e)
+        {
+            new frmCaiDat().ShowDialog();
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            new frmThongTin().ShowDialog();
+        }
     }
 }

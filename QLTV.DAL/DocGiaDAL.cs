@@ -48,7 +48,7 @@ namespace QLTV.DAL
         public bool insertData(DocGia data)
         {
             bool check = false;
-            String sql = String.Format("INSERT INTO tb_DocGia(maDocGia, tenDocGia, email, dienThoai) VALUES('{0}','{1}','{2}','{3}')",data.MaDocGia,data.TenDocGia,data.Email,data.DienThoai);
+            String sql = String.Format("INSERT INTO tb_DocGia(maDocGia, tenDocGia, email, dienThoai) VALUES('{0}',N'{1}','{2}','{3}')",data.MaDocGia,data.TenDocGia,data.Email,data.DienThoai);
             openConnection();
             int r = ExecuteNonQuery(sql);
             if (r > 0) check = true;

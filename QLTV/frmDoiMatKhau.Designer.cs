@@ -42,7 +42,7 @@
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Location = new System.Drawing.Point(316, 239);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 39);
             this.btnHuy.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             this.btnDoiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMK.Location = new System.Drawing.Point(92, 239);
-            this.btnDoiMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDoiMK.Margin = new System.Windows.Forms.Padding(4);
             this.btnDoiMK.Name = "btnDoiMK";
             this.btnDoiMK.Size = new System.Drawing.Size(136, 39);
             this.btnDoiMK.TabIndex = 0;
@@ -66,28 +66,31 @@
             // 
             this.txtmk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmk1.Location = new System.Drawing.Point(212, 53);
-            this.txtmk1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmk1.Margin = new System.Windows.Forms.Padding(4);
             this.txtmk1.Name = "txtmk1";
             this.txtmk1.Size = new System.Drawing.Size(203, 23);
             this.txtmk1.TabIndex = 1;
+            this.txtmk1.UseSystemPasswordChar = true;
             // 
             // txtmk2
             // 
             this.txtmk2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmk2.Location = new System.Drawing.Point(212, 112);
-            this.txtmk2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmk2.Margin = new System.Windows.Forms.Padding(4);
             this.txtmk2.Name = "txtmk2";
             this.txtmk2.Size = new System.Drawing.Size(203, 23);
             this.txtmk2.TabIndex = 1;
+            this.txtmk2.UseSystemPasswordChar = true;
             // 
             // txtmk3
             // 
             this.txtmk3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmk3.Location = new System.Drawing.Point(212, 170);
-            this.txtmk3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmk3.Margin = new System.Windows.Forms.Padding(4);
             this.txtmk3.Name = "txtmk3";
             this.txtmk3.Size = new System.Drawing.Size(203, 23);
             this.txtmk3.TabIndex = 1;
+            this.txtmk3.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -136,7 +139,7 @@
             this.Controls.Add(this.btnDoiMK);
             this.Controls.Add(this.btnHuy);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDoiMatKhau";
             this.Text = "frmDoiMatKhau";
             this.ResumeLayout(false);

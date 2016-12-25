@@ -31,14 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiSach));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
             this.dgvLoaiSach = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnLamTuoi = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +40,13 @@
             this.txtMota = new System.Windows.Forms.TextBox();
             this.txtTenLoaiSach = new System.Windows.Forms.TextBox();
             this.txtMaLoaiSach = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnLamTuoi = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiSach)).BeginInit();
             this.panel2.SuspendLayout();
@@ -56,31 +57,20 @@
             // 
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.btnTimKiem);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.dgvLoaiSach);
             this.panel1.Location = new System.Drawing.Point(280, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(511, 396);
+            this.panel1.Size = new System.Drawing.Size(476, 396);
             this.panel1.TabIndex = 0;
             // 
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(102, 28);
+            this.txtTimKiem.Location = new System.Drawing.Point(33, 40);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(288, 23);
             this.txtTimKiem.TabIndex = 2;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Image = global::QLTV.Properties.Resources.find;
-            this.btnTimKiem.Location = new System.Drawing.Point(415, 19);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 37);
-            this.btnTimKiem.TabIndex = 1;
-            this.btnTimKiem.Text = "Tìm Kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // dgvLoaiSach
             // 
@@ -90,7 +80,7 @@
             this.dgvLoaiSach.Location = new System.Drawing.Point(4, 94);
             this.dgvLoaiSach.Name = "dgvLoaiSach";
             this.dgvLoaiSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLoaiSach.Size = new System.Drawing.Size(504, 302);
+            this.dgvLoaiSach.Size = new System.Drawing.Size(472, 302);
             this.dgvLoaiSach.TabIndex = 0;
             this.dgvLoaiSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiSach_CellClick);
             // 
@@ -103,68 +93,8 @@
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Location = new System.Drawing.Point(12, 415);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(779, 54);
+            this.panel2.Size = new System.Drawing.Size(744, 54);
             this.panel2.TabIndex = 0;
-            // 
-            // btnLamTuoi
-            // 
-            this.btnLamTuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamTuoi.Image = global::QLTV.Properties.Resources.refresh;
-            this.btnLamTuoi.Location = new System.Drawing.Point(34, 4);
-            this.btnLamTuoi.Name = "btnLamTuoi";
-            this.btnLamTuoi.Size = new System.Drawing.Size(91, 47);
-            this.btnLamTuoi.TabIndex = 1;
-            this.btnLamTuoi.Text = "&Làm Tươi";
-            this.btnLamTuoi.UseVisualStyleBackColor = true;
-            this.btnLamTuoi.Click += new System.EventHandler(this.btnLamTuoi_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Image = global::QLTV.Properties.Resources.add;
-            this.btnThem.Location = new System.Drawing.Point(187, 3);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 48);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "&Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Image = global::QLTV.Properties.Resources.back;
-            this.btnBack.Location = new System.Drawing.Point(674, 3);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 47);
-            this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "Quay Lại";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Image = global::QLTV.Properties.Resources.delete;
-            this.btnXoa.Location = new System.Drawing.Point(507, 3);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 47);
-            this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "&Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Image = global::QLTV.Properties.Resources.edit;
-            this.btnSua.Location = new System.Drawing.Point(340, 4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 47);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "&Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // panel3
             // 
@@ -234,11 +164,105 @@
             this.txtMaLoaiSach.Size = new System.Drawing.Size(195, 23);
             this.txtMaLoaiSach.TabIndex = 2;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(30, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tìm Kiếm Theo Tên Danh Mục";
+            // 
+            // btnLamTuoi
+            // 
+            this.btnLamTuoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamTuoi.Image = global::QLTV.Properties.Resources.refresh;
+            this.btnLamTuoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamTuoi.Location = new System.Drawing.Point(25, 4);
+            this.btnLamTuoi.Name = "btnLamTuoi";
+            this.btnLamTuoi.Size = new System.Drawing.Size(107, 47);
+            this.btnLamTuoi.TabIndex = 1;
+            this.btnLamTuoi.Text = "&Làm Tươi";
+            this.btnLamTuoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLamTuoi.UseVisualStyleBackColor = true;
+            this.btnLamTuoi.Click += new System.EventHandler(this.btnLamTuoi_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::QLTV.Properties.Resources.add;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(187, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(86, 48);
+            this.btnThem.TabIndex = 1;
+            this.btnThem.Text = "&Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Image = global::QLTV.Properties.Resources.back;
+            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBack.Location = new System.Drawing.Point(628, 3);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(102, 47);
+            this.btnBack.TabIndex = 1;
+            this.btnBack.Text = "Quay Lại";
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = global::QLTV.Properties.Resources.delete;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(478, 3);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(82, 47);
+            this.btnXoa.TabIndex = 1;
+            this.btnXoa.Text = "&Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = global::QLTV.Properties.Resources.edit;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(331, 4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(82, 47);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "&Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Image = global::QLTV.Properties.Resources.find;
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(346, 28);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(94, 45);
+            this.btnTimKiem.TabIndex = 1;
+            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // frmLoaiSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 477);
+            this.ClientSize = new System.Drawing.Size(761, 477);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -276,5 +300,6 @@
         private System.Windows.Forms.TextBox txtTenLoaiSach;
         private System.Windows.Forms.TextBox txtMaLoaiSach;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label4;
     }
 }
