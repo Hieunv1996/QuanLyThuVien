@@ -37,6 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHuyBo = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.ckbHienMK = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +87,7 @@
             this.lbInfo.AutoSize = true;
             this.lbInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfo.ForeColor = System.Drawing.Color.Red;
-            this.lbInfo.Location = new System.Drawing.Point(156, 175);
+            this.lbInfo.Location = new System.Drawing.Point(186, 178);
             this.lbInfo.Name = "lbInfo";
             this.lbInfo.Size = new System.Drawing.Size(18, 20);
             this.lbInfo.TabIndex = 4;
@@ -133,12 +134,24 @@
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
+            // ckbHienMK
+            // 
+            this.ckbHienMK.AutoSize = true;
+            this.ckbHienMK.Location = new System.Drawing.Point(258, 161);
+            this.ckbHienMK.Name = "ckbHienMK";
+            this.ckbHienMK.Size = new System.Drawing.Size(95, 17);
+            this.ckbHienMK.TabIndex = 6;
+            this.ckbHienMK.Text = "Hiện mật khẩu";
+            this.ckbHienMK.UseVisualStyleBackColor = true;
+            this.ckbHienMK.CheckedChanged += new System.EventHandler(this.ckbHienMK_CheckedChanged_1);
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(469, 287);
+            this.Controls.Add(this.ckbHienMK);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbInfo);
             this.Controls.Add(this.btnHuyBo);
@@ -147,7 +160,9 @@
             this.Controls.Add(this.txtTaiKhoan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmDangNhap";
             this.Text = "Đăng Nhập Hệ Thống";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDangNhap_FormClosing);
@@ -168,5 +183,6 @@
         private System.Windows.Forms.Button btnHuyBo;
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox ckbHienMK;
     }
 }

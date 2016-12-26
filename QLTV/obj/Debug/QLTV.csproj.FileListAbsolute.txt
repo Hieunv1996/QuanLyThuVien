@@ -49,3 +49,4 @@ E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmPTReport.resources
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmDoiMatKhau.resources
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmCaiDat.resources
 E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmThongTin.resources
+E:\Code\visualStudio\QuanLyThuVien\QLTV\obj\Debug\QLTV.frmQuaHan.resources

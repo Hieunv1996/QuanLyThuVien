@@ -89,5 +89,11 @@ namespace QLTV
         {
             new frmThongTin().ShowDialog();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbDate.Text = DateTime.Now.ToString("dd-MM-yyyy | hh:mm:ss tt");
+            timer1.Start();
+        }
     }
 }

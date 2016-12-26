@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QLTV.DLL;
 using QLTV.Entity;
 
+
 namespace QLTV
 {
     public partial class frmDangNhap : Form
@@ -63,6 +64,16 @@ namespace QLTV
         private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+        private void ckbHienMK_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if(ckbHienMK.Checked == true)
+            {
+                txtMatKhau.UseSystemPasswordChar = false;
+            }else
+            {
+                txtMatKhau.UseSystemPasswordChar = true;
+            }
         }
     }
 }

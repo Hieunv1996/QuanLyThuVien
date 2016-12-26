@@ -148,6 +148,8 @@ namespace QLTV
         private void btnThem_Click(object sender, EventArgs e)
         {
             new frmMuon().ShowDialog();
+            binDataCTPM("", "", "");
+            binDataPM("", "", "");
         }
 
         private void dgvCTPM_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -168,6 +170,8 @@ namespace QLTV
             lstctpm = objctpm.getAll("", "maPM = '" + id + "'", "");
             idDocGia = dgvPhieuMuon.CurrentRow.Cells[1].Value.ToString();
             new frmMuon(true).ShowDialog();
+            binDataCTPM("", "", "");
+            binDataPM("", "", "");
         }
 
         private void btnQuayLai_Click(object sender, EventArgs e)
@@ -193,6 +197,11 @@ namespace QLTV
             string maDG = dgvPhieuMuon.CurrentRow.Cells[1].Value.ToString();
             string thanhTien = dgvPhieuMuon.CurrentRow.Cells[3].Value.ToString();
             new frmPMReport(maDG, thanhTien, maPM).ShowDialog();
+        }
+
+        private void btnQH_Click(object sender, EventArgs e)
+        {
+            new frmQuaHan().ShowDialog();
         }
     }
 }

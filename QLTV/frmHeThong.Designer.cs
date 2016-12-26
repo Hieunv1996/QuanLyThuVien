@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHeThong));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbDate = new System.Windows.Forms.Label();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnQLTra = new System.Windows.Forms.Button();
             this.btnQLMuon = new System.Windows.Forms.Button();
@@ -45,6 +47,7 @@
             this.btnDoiMK = new System.Windows.Forms.Button();
             this.lb1 = new System.Windows.Forms.Label();
             this.lbXinChao = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -53,18 +56,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(137, 50);
+            this.label1.Location = new System.Drawing.Point(110, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(570, 47);
+            this.label1.Size = new System.Drawing.Size(650, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "PHẦN MỀM QUẢN LÝ THƯ VIỆN";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(10, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(857, 403);
@@ -72,18 +75,28 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel3.Controls.Add(this.lbDate);
             this.panel3.Controls.Add(this.btnBaoCao);
             this.panel3.Controls.Add(this.btnQLTra);
             this.panel3.Controls.Add(this.btnQLMuon);
             this.panel3.Controls.Add(this.btnQLLoaiSach);
             this.panel3.Controls.Add(this.btnQLDocGia);
             this.panel3.Controls.Add(this.btnQLSach);
-            this.panel3.Location = new System.Drawing.Point(250, 0);
+            this.panel3.Location = new System.Drawing.Point(231, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(604, 403);
+            this.panel3.Size = new System.Drawing.Size(626, 403);
             this.panel3.TabIndex = 0;
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Location = new System.Drawing.Point(391, 382);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(13, 13);
+            this.lbDate.TabIndex = 1;
+            this.lbDate.Text = "_";
             // 
             // btnBaoCao
             // 
@@ -165,39 +178,44 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel2.Controls.Add(this.btnThoat);
             this.panel2.Controls.Add(this.btnDangXuat);
             this.panel2.Controls.Add(this.btnCaiDat);
             this.panel2.Controls.Add(this.btnDoiMK);
-            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 96);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 396);
+            this.panel2.Size = new System.Drawing.Size(244, 400);
             this.panel2.TabIndex = 0;
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnThoat.Location = new System.Drawing.Point(3, 309);
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(22, 309);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(233, 48);
+            this.btnThoat.Size = new System.Drawing.Size(199, 48);
             this.btnThoat.TabIndex = 0;
             this.btnThoat.Text = "Thoát Phần Mềm";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDangXuat.Location = new System.Drawing.Point(3, 216);
+            this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(22, 216);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(233, 48);
+            this.btnDangXuat.Size = new System.Drawing.Size(199, 48);
             this.btnDangXuat.TabIndex = 0;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
@@ -205,13 +223,15 @@
             // 
             // btnCaiDat
             // 
-            this.btnCaiDat.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnCaiDat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCaiDat.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaiDat.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCaiDat.Location = new System.Drawing.Point(4, 130);
+            this.btnCaiDat.Image = ((System.Drawing.Image)(resources.GetObject("btnCaiDat.Image")));
+            this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCaiDat.Location = new System.Drawing.Point(22, 128);
             this.btnCaiDat.Name = "btnCaiDat";
-            this.btnCaiDat.Size = new System.Drawing.Size(233, 48);
+            this.btnCaiDat.Size = new System.Drawing.Size(199, 48);
             this.btnCaiDat.TabIndex = 0;
             this.btnCaiDat.Text = "Cài Đặt";
             this.btnCaiDat.UseVisualStyleBackColor = false;
@@ -219,13 +239,15 @@
             // 
             // btnDoiMK
             // 
-            this.btnDoiMK.BackColor = System.Drawing.Color.YellowGreen;
+            this.btnDoiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDoiMK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoiMK.Font = new System.Drawing.Font("Monotype Corsiva", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMK.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDoiMK.Location = new System.Drawing.Point(4, 42);
+            this.btnDoiMK.Image = ((System.Drawing.Image)(resources.GetObject("btnDoiMK.Image")));
+            this.btnDoiMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoiMK.Location = new System.Drawing.Point(22, 42);
             this.btnDoiMK.Name = "btnDoiMK";
-            this.btnDoiMK.Size = new System.Drawing.Size(233, 48);
+            this.btnDoiMK.Size = new System.Drawing.Size(199, 48);
             this.btnDoiMK.TabIndex = 0;
             this.btnDoiMK.Text = "Đổi Mật Khẩu";
             this.btnDoiMK.UseVisualStyleBackColor = false;
@@ -252,23 +274,34 @@
             this.lbXinChao.Text = "GUEST";
             this.lbXinChao.Click += new System.EventHandler(this.lb1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmHeThong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(873, 500);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(863, 500);
             this.Controls.Add(this.lbXinChao);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lb1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmHeThong";
             this.Text = "Trang Chủ | Phần Mềm Quản Lý Thư Viện";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHeThong_FormClosing);
             this.Load += new System.EventHandler(this.frmHeThong_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -293,5 +326,7 @@
         private System.Windows.Forms.Button btnCaiDat;
         private System.Windows.Forms.Label lb1;
         private System.Windows.Forms.Label lbXinChao;
+        private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.Timer timer1;
     }
 }

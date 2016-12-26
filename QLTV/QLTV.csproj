@@ -58,12 +58,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCaiDat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +124,12 @@
     <Compile Include="frmQLTra.Designer.cs">
       <DependentUpon>frmQLTra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuaHan.Designer.cs">
+      <DependentUpon>frmQuaHan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +194,9 @@
     <EmbeddedResource Include="frmQLTra.resx">
       <DependentUpon>frmQLTra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuaHan.resx">
+      <DependentUpon>frmQuaHan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +216,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="rpPM.rdlc" />
     <EmbeddedResource Include="rpPT.rdlc" />
+    <EmbeddedResource Include="rpQuaHan.rdlc" />
     <EmbeddedResource Include="rpSach.rdlc" />
     <EmbeddedResource Include="rpSach1.rdlc" />
     <None Include="Properties\Settings.settings">

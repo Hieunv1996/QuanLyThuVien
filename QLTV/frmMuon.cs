@@ -96,11 +96,22 @@ namespace QLTV
                 return;
             }
             data.MaSach = cmbMaSach.SelectedValue.ToString();
+
+            List<Sach> lst = new List<Sach>();
+            lst = objs.getAll("", "maSach = '" + data.MaSach + "'", "");
+            if (lst[0].SoLuongTon <= 0) {
+                MessageBox.Show("Sách đã hết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearText();
+                return;
+            }
+
+
             for (int i = 0; i < lstms.Count; i++)
             {
                 if (data.MaSach.Equals(lstms[i]))
                 {
                     MessageBox.Show("Không thể mượn 2 cuốn sách cùng loại!");
+                    clearText();
                     return;
                 }
             }
@@ -296,6 +307,16 @@ namespace QLTV
                     return;
                 }
             }
+
+            List<Sach> lst = new List<Sach>();
+            lst = objs.getAll("", "maSach = '" + data.MaSach + "'", "");
+            if (lst[0].SoLuongTon <= 0)
+            {
+                MessageBox.Show("Sách đã hết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clearText();
+                return;
+            }
+
             data.NgayTra = dtpkNgayTra.Value.ToShortDateString();
             data.TienCoc = (int)nbTienCoc.Value;
             String maSach = dgvHienThi.CurrentRow.Cells[2].Value.ToString();

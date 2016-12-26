@@ -116,6 +116,8 @@ namespace QLTV
         private void btnThem_Click(object sender, EventArgs e)
         {
             new frmTra().ShowDialog();
+            binDataPT("", "", "");
+            binDataCTPT("", "", "");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

@@ -95,6 +95,8 @@
             this.Controls.Add(this.nbPhatQuaHan);
             this.Controls.Add(this.btnHuyBo);
             this.Controls.Add(this.btnXacNhan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmCaiDat";
             this.Text = "Cài Đặt | Phần Mềm Quản Lý Thư Viện";
             ((System.ComponentModel.ISupportInitialize)(this.nbPhatQuaHan)).EndInit();

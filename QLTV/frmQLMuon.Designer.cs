@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLMuon));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiemPM = new System.Windows.Forms.TextBox();
             this.dgvPhieuMuon = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtTimKiemCTPM = new System.Windows.Forms.TextBox();
             this.dgvCTPM = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -44,8 +46,7 @@
             this.btnLamTuoi = new System.Windows.Forms.Button();
             this.btnTimKiemCTPM = new System.Windows.Forms.Button();
             this.btnTimKiemPM = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnQH = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMuon)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,6 +65,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 418);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Tìm Kiếm Theo Mã PM";
             // 
             // txtTimKiemPM
             // 
@@ -89,6 +99,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.btnQH);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtTimKiemCTPM);
             this.panel2.Controls.Add(this.btnTimKiemCTPM);
@@ -98,12 +109,21 @@
             this.panel2.Size = new System.Drawing.Size(555, 418);
             this.panel2.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(56, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tìm Kiếm Theo Mã CTPM";
+            // 
             // txtTimKiemCTPM
             // 
             this.txtTimKiemCTPM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemCTPM.Location = new System.Drawing.Point(74, 43);
+            this.txtTimKiemCTPM.Location = new System.Drawing.Point(59, 35);
             this.txtTimKiemCTPM.Name = "txtTimKiemCTPM";
-            this.txtTimKiemCTPM.Size = new System.Drawing.Size(320, 23);
+            this.txtTimKiemCTPM.Size = new System.Drawing.Size(271, 23);
             this.txtTimKiemCTPM.TabIndex = 2;
             // 
             // dgvCTPM
@@ -136,7 +156,7 @@
             // 
             this.btnXuat.Image = global::QLTV.Properties.Resources.export;
             this.btnXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuat.Location = new System.Drawing.Point(686, 6);
+            this.btnXuat.Location = new System.Drawing.Point(620, 6);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(91, 46);
             this.btnXuat.TabIndex = 2;
@@ -149,7 +169,7 @@
             // 
             this.btnQuayLai.Image = global::QLTV.Properties.Resources.back;
             this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuayLai.Location = new System.Drawing.Point(849, 6);
+            this.btnQuayLai.Location = new System.Drawing.Point(798, 6);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(89, 48);
             this.btnQuayLai.TabIndex = 1;
@@ -162,7 +182,7 @@
             // 
             this.btnXoa.Image = global::QLTV.Properties.Resources.delete;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(520, 6);
+            this.btnXoa.Location = new System.Drawing.Point(468, 6);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 48);
             this.btnXoa.TabIndex = 1;
@@ -175,7 +195,7 @@
             // 
             this.btnSua.Image = global::QLTV.Properties.Resources.edit;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(349, 6);
+            this.btnSua.Location = new System.Drawing.Point(327, 6);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(78, 48);
             this.btnSua.TabIndex = 1;
@@ -188,7 +208,7 @@
             // 
             this.btnThem.Image = global::QLTV.Properties.Resources.add;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(197, 6);
+            this.btnThem.Location = new System.Drawing.Point(178, 5);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(83, 48);
             this.btnThem.TabIndex = 1;
@@ -214,7 +234,7 @@
             // 
             this.btnTimKiemCTPM.Image = global::QLTV.Properties.Resources.find;
             this.btnTimKiemCTPM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemCTPM.Location = new System.Drawing.Point(433, 33);
+            this.btnTimKiemCTPM.Location = new System.Drawing.Point(247, 64);
             this.btnTimKiemCTPM.Name = "btnTimKiemCTPM";
             this.btnTimKiemCTPM.Size = new System.Drawing.Size(83, 38);
             this.btnTimKiemCTPM.TabIndex = 1;
@@ -236,23 +256,15 @@
             this.btnTimKiemPM.UseVisualStyleBackColor = true;
             this.btnTimKiemPM.Click += new System.EventHandler(this.btnTimKiemPM_Click);
             // 
-            // label1
+            // btnQH
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tìm Kiếm Theo Mã PM";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Tìm Kiếm Theo Mã CTPM";
+            this.btnQH.Location = new System.Drawing.Point(433, 29);
+            this.btnQH.Name = "btnQH";
+            this.btnQH.Size = new System.Drawing.Size(82, 46);
+            this.btnQH.TabIndex = 3;
+            this.btnQH.Text = "DS Quá Hạn";
+            this.btnQH.UseVisualStyleBackColor = true;
+            this.btnQH.Click += new System.EventHandler(this.btnQH_Click);
             // 
             // frmQLMuon
             // 
@@ -262,7 +274,9 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmQLMuon";
             this.Text = "Quản Lý Mượn Sách | Phần Mềm Quản Lý Thư Viện";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQLMuon_FormClosing);
@@ -297,5 +311,6 @@
         private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnQH;
     }
 }

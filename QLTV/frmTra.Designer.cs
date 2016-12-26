@@ -398,7 +398,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 510);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmTra";
             this.Text = "Thêm Phiếu Trả | Phần Mềm Quản Lý Thư Viện";
             this.Load += new System.EventHandler(this.frmTra_Load);

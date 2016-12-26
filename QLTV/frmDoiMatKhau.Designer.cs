@@ -139,7 +139,9 @@
             this.Controls.Add(this.btnDoiMK);
             this.Controls.Add(this.btnHuy);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmDoiMatKhau";
             this.Text = "frmDoiMatKhau";
             this.ResumeLayout(false);

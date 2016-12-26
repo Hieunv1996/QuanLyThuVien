@@ -22,7 +22,6 @@ namespace QLTV
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            new frmHeThong().Show();
             this.Hide();
         }
         
