@@ -1,12 +1,13 @@
 # QuanLyThuVien
 Project C#
+## Ứng dụng quản lý thư viện sử dụng mô hình 3 lớp
 
 ## Author
 #### [Nguyễn Văn Hiếu](https://www.facebook.com/hieunv1996)
 
-#Tool
-### VS 2015
-### SQL Server 2012
+# Tool
+  + Visual Studio 2015
+  + SQL Server 2012
 
 # Setup in Windows
 ### Step 1: Run *script.sql* in SQL to built Database + data
